@@ -15,3 +15,6 @@
 <!-- Slick -->
 <link rel="stylesheet" href="{{ asset('slick/slick.css') }}">
 <link rel="stylesheet" href="{{ asset('slick/slick-theme.css') }}">
+
+{{-- AOS --}}
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />

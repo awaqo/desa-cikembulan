@@ -1,3 +1,7 @@
+// AOS init
+AOS.init();
+
+// Slick Carousel
 $('.recent-post').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
