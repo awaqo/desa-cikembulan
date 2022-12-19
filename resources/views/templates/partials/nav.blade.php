@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="bg-white sticky top-0 w-full z-20 border-gray-200 px-4 sm:px-16 py-4 shadow-lg">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
-        <a href="/" class="flex items-center">
+        <a href="{{ route('beranda') }}" class="flex items-center">
             <img src="{{ asset('images/logo-bms.png') }}" class="h-6 mr-3 sm:h-9" alt="Logo" />
             <div class="flex flex-col">
                 <span class="text-xl font-bold whitespace-nowrap">Cikembulan</span>
@@ -15,7 +15,7 @@
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="flex flex-col p-4 mt-4 bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:font-medium md:border-0 md:bg-white">
                 <li>
-                    <a href="/" class="{{ ($title === "Beranda") ? 'md:bg-transparent md:text-[#2EB5F8] bg-[#2EB5F8] text-white' : '' }} block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#2EB5F8] md:p-0">
+                    <a href="{{ route('beranda') }}" class="{{ ($title === "Beranda") ? 'md:bg-transparent md:text-[#2EB5F8] bg-[#2EB5F8] text-white' : '' }} block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#2EB5F8] md:p-0">
                         Beranda
                     </a>
                 </li>
@@ -27,12 +27,12 @@
                     <div id="dropdownNavbar" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44">
                         <ul class="py-1 text-sm text-gray-500" aria-labelledby="dropdownLargeButton">
                           <li>
-                            <a href="/profil/visi-misi" class="{{ ($title === "Profil - Visi Misi") ? 'md:bg-transparent md:text-[#2EB5F8] bg-[#2EB5F8] text-white' : '' }} block px-4 py-2 hover:bg-gray-100">
+                            <a href="{{ route('visi-misi') }}" class="{{ ($title === "Profil - Visi Misi") ? 'md:bg-transparent md:text-[#2EB5F8] bg-[#2EB5F8] text-white' : '' }} block px-4 py-2 hover:bg-gray-100">
                                 Visi Misi
                             </a>
                           </li>
                           <li>
-                            <a href="/profil/gambaran-umum" class="{{ ($title === "Profil - Gambaran Umum") ? 'md:bg-transparent md:text-[#2EB5F8] bg-[#2EB5F8] text-white' : '' }} block px-4 py-2 hover:bg-gray-100">
+                            <a href="{{ route('gambaran-umum') }}" class="{{ ($title === "Profil - Gambaran Umum") ? 'md:bg-transparent md:text-[#2EB5F8] bg-[#2EB5F8] text-white' : '' }} block px-4 py-2 hover:bg-gray-100">
                                 Gambaran Umum
                             </a>
                           </li>
@@ -40,12 +40,12 @@
                     </div>
                 </li>
                 <li>
-                    <a href="/layanan" class="{{ ($title === "Layanan") ? 'md:bg-transparent md:text-[#2EB5F8] bg-[#2EB5F8] text-white' : '' }} block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#2EB5F8] md:p-0">
+                    <a href="{{ route('layanan') }}" class="{{ ($title === "Layanan") ? 'md:bg-transparent md:text-[#2EB5F8] bg-[#2EB5F8] text-white' : '' }} block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#2EB5F8] md:p-0">
                         Layanan
                     </a>
                 </li>
                 <li>
-                    <a href="/informasi" class="{{ ($title === "Informasi") ? 'md:bg-transparent md:text-[#2EB5F8] bg-[#2EB5F8] text-white' : '' }} block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#2EB5F8] md:p-0">
+                    <a href="{{ route('informasi') }}" class="{{ ($title === "Informasi") ? 'md:bg-transparent md:text-[#2EB5F8] bg-[#2EB5F8] text-white' : '' }} block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#2EB5F8] md:p-0">
                         Informasi
                     </a>
                 </li>

@@ -26,7 +26,7 @@
         {{-- Deskripsi --}}
         <div class="md:flex md:items-center gap-8 mt-4" data-aos="fade-up" data-aos-easing="ease-in-out">
             <div class="w-full sm:max-w-xl mx-auto md:mx-0">
-                <h1 class="text-3xl font-bold text-center text-[#2EB5F8] drop-shadow-md">Gambaran Umum</h1>
+                <h1 class="text-3xl font-bold text-center text-[#2EB5F8]">Gambaran Umum</h1>
                 <img class="mx-auto mt-5" src="{{ asset('images/gambaran_umum_illust.png') }}" alt="">
             </div>
             <div class="flex flex-col gap-4 mt-6 sm:mt-0">

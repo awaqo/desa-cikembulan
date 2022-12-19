@@ -10,7 +10,7 @@
             <div class="max-w-sm text-xl">
                 <p>Desa Cikembulan adalah desa di wilayah Kab.Banyumas</p>
             </div>
-            <a href="/profil/gambaran-umum" class="max-w-fit px-8 py-5 font-bold uppercase bg-[#2EB5F8] hover:bg-[#009AE7] transition duration-300 ease-in-out rounded-full">
+            <a href="{{ route('gambaran-umum') }}" class="max-w-fit px-8 py-5 font-bold uppercase bg-[#2EB5F8] hover:bg-[#009AE7] transition duration-300 ease-in-out rounded-full">
                 Lihat Profil <i class="fa-sharp fa-solid fa-caret-right"></i>
             </a>
         </div>
@@ -24,7 +24,7 @@
 
     <!-- Menu Website -->
     <div class="md:flex md:items-center md:justify-evenly mt-24 mx-8">
-        <a data-aos="fade-up" data-aos-easing="ease-in-out" href="/profil/gambaran-umum" class="group max-w-full lg:max-w-xs p-6 rounded-xl sm:bg-white sm:hover:bg-[#f1f5ff] transition duration-300 ease-in-out">
+        <a data-aos="fade-up" data-aos-easing="ease-in-out" href="{{ route('gambaran-umum') }}" class="group max-w-full lg:max-w-xs p-6 rounded-xl sm:bg-white sm:hover:bg-[#f1f5ff] transition duration-300 ease-in-out">
             <div class="flex flex-row lg:items-center sm:justify-center items-center gap-x-8 mb-4">
                 <img class="h-14 group-hover:rotate-45 transition duration-300 ease-in-out" src="{{ asset('images/circle-progress.png') }}" alt="">
                 <h5 class="text-xl font-medium" data-aos="fade-up" data-aos-easing="ease-in-out">Profil</h5>
@@ -34,7 +34,7 @@
 
         <div data-aos="fade-up" data-aos-easing="ease-in-out" class="hidden md:block w-0.5 h-56 bg-[#2EB5F8]"></div>
 
-        <a data-aos="fade-up" data-aos-easing="ease-in-out" href="/layanan" class="group max-w-full lg:max-w-xs p-6 rounded-xl sm:bg-white sm:hover:bg-[#f1f5ff] transition duration-300 ease-in-out">
+        <a data-aos="fade-up" data-aos-easing="ease-in-out" href="{{ route('layanan') }}" class="group max-w-full lg:max-w-xs p-6 rounded-xl sm:bg-white sm:hover:bg-[#f1f5ff] transition duration-300 ease-in-out">
             <div class="flex flex-row lg:items-center sm:justify-center items-center gap-x-8 mb-4">
                 <img class="h-14 group-hover:rotate-45 transition duration-300 ease-in-out" src="{{ asset('images/circle-progress.png') }}" alt="">
                 <h5 class="text-xl font-medium" data-aos="fade-up" data-aos-easing="ease-in-out">Layanan</h5>
@@ -44,7 +44,7 @@
 
         <div data-aos="fade-up" data-aos-easing="ease-in-out" class="hidden md:block w-0.5 h-56 bg-[#2EB5F8]"></div>
 
-        <a data-aos="fade-up" data-aos-easing="ease-in-out" href="/informasi" class="group max-w-full lg:max-w-xs p-6 rounded-xl sm:bg-white sm:hover:bg-[#f1f5ff] transition duration-300 ease-in-out">
+        <a data-aos="fade-up" data-aos-easing="ease-in-out" href="{{ route('informasi') }}" class="group max-w-full lg:max-w-xs p-6 rounded-xl sm:bg-white sm:hover:bg-[#f1f5ff] transition duration-300 ease-in-out">
             <div class="flex flex-row lg:items-center sm:justify-center items-center gap-x-8 mb-4">
                 <img class="h-14 group-hover:rotate-45 transition duration-300 ease-in-out" src="{{ asset('images/circle-progress.png') }}" alt="">
                 <h5 class="text-xl font-medium" data-aos="fade-up" data-aos-easing="ease-in-out">Informasi</h5>

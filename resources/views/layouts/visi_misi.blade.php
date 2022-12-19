@@ -25,7 +25,7 @@
     <div class="flex flex-col items-center mt-8 md:mt-16 mx-4 mb-24" data-aos="fade-up" data-aos-easing="ease-in-out">
         {{-- Visi --}}
         <h1 class="uppercase text-2xl sm:text-3xl text-center font-bold text-[#2EB5F8]">Visi</h1>
-        <div class="w-full md:max-w-3xl bg-[#84d6ff] px-12 py-10 sm:px-16 sm:py-16 mt-6 sm:mt-10 rounded-xl text-center">
+        <div class="w-full md:max-w-3xl bg-[#84d6ff] px-8 py-10 sm:px-16 sm:py-16 mt-6 sm:mt-10 rounded-xl text-center">
             <p class="text-lg text-gray-600">
                 “Terbangunnya Tata Kelola Pemerintahan Desa yang baik dan bersih guna terwujudnya kehidupan masyarakat desa yang adil, makmur dan sejahtera serta berbudaya dan berakhlaq mulia”
             </p>
@@ -33,7 +33,7 @@
 
         {{-- Misi --}}
         <h1 class="uppercase mt-24 text-2xl sm:text-3xl font-bold text-[#2EB5F8]">Misi</h1>
-        <div class="w-full md:max-w-3xl flex justify-center bg-[#84d6ff] px-12 py-10 sm:px-16 sm:py-16 mt-6 sm:mt-10 rounded-xl">
+        <div class="w-full md:max-w-3xl flex justify-center bg-[#84d6ff] px-8 py-10 sm:px-16 sm:py-16 mt-6 sm:mt-10 rounded-xl">
             <ol class="w-fit list-decimal list-inside text-lg text-gray-600 text-left sm:text-justify">
                 <li class="mb-2">Meningkatkan tata pemerintahan yang demokratis, trasparan, akuntabel, efisien dan efektif</li>
                 <li class="mb-2">Meningkatkan perekonomian pedesaan yang memiliki daya saing berbasis pada BUMDes dan Teknologi, baik pertanian, perikanan, perkebunan dan home industry</li>
