@@ -25,7 +25,7 @@
     <div class="h-screen flex justify-center items-center mx-3">
         <div class="w-full max-w-md p-4 rounded-lg shadow-md sm:p-6 md:p-8 bg-gray-800 border-gray-700">
             <form class="space-y-6" action="{{ route('auth.validate_registration') }}" method="POST">
-                <a href="{{ route('beranda') }}" class="ml-auto text-sm hover:underline text-blue-500"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+                <a href="{{ route('beranda') }}" class="ml-auto text-sm hover:underline text-[#2EB5F8]"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
                 <div class="flex gap-3">
                     <div class="w-8 h-8">
                         <img src="{{ asset('images/logo-bms.png') }}" alt="">
@@ -36,7 +36,7 @@
                 <div>
                     <label for="name" class="block mb-2 text-sm font-medium text-white">Nama</label>
                     <input type="text" name="name" id="name" 
-                        class="bg-gray-600 border-gray-500 placeholder-gray-400 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
+                        class="bg-gray-600 border-gray-500 placeholder-gray-400 text-white text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5" 
                         placeholder="nama admin" required>
                     @if ($errors->has('name'))
                         <span class="text-xs text-red-500">{{ $errors->first('name') }}</span>
@@ -45,7 +45,7 @@
                 <div>
                     <label for="username" class="block mb-2 text-sm font-medium text-white">Username</label>
                     <input type="text" name="username" id="username" 
-                        class="bg-gray-600 border-gray-500 placeholder-gray-400 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
+                        class="bg-gray-600 border-gray-500 placeholder-gray-400 text-white text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5" 
                         placeholder="username123" required>
                     @if ($errors->has('username'))
                         <span class="text-xs text-red-500">{{ $errors->first('username') }}</span>
@@ -54,7 +54,7 @@
                 <div>
                     <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
                     <input type="password" name="password" id="password" 
-                        class="bg-gray-600 border-gray-500 placeholder-gray-400 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        class="bg-gray-600 border-gray-500 placeholder-gray-400 text-white text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5"
                         placeholder="••••••••" required>
                     @if ($errors->has('password'))
                         <span class="text-xs text-red-500">{{ $errors->first('password') }}</span>
