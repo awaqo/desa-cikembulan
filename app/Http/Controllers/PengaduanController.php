@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use App\Models\Pengaduan;
+use App\Notifications\AduanDiterima;
+use Illuminate\Support\Facades\Notification;
 
 class PengaduanController extends Controller
 {
@@ -44,6 +46,15 @@ class PengaduanController extends Controller
             'file_pendukung' => $file_pendukung->hashName(),
         ]);
 
+        // Kirim Notifikasi ke Email User
+        $dataUser = Pengaduan::orderBy('created_at', 'desc')->first();
+
+        $penerima = [
+            $dataUser['email'] => $dataUser['nama']
+        ];
+
+        Notification::route('mail', $penerima)->notify(new AduanDiterima());
+
         return redirect()->route('layanan')->with('success', 'Laporan pengaduan Anda berhasil disubmit, Kami akan segera memprosesnya. Mohon berkenan untuk menunggu 🙏');
     }
 
@@ -55,5 +66,12 @@ class PengaduanController extends Controller
     public function show_by_id($id) {
         $pengaduanData = Pengaduan::where('id',$id)->get();
         return view('admin.pengaduan.show_by_id', compact('pengaduanData'));
+    }
+
+    public function hapus($id) {
+        $data = Pengaduan::find($id);
+        $data->delete();
+
+        return redirect()->route('admin_pengaduan')->with('success', 'Data berhasil dihapus');
     }
 }

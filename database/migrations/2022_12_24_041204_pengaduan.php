@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('nik');
             $table->string('no_hp');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('jenis_kelamin');
             // alamat
             $table->string('prov');

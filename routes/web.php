@@ -59,6 +59,7 @@ Route::prefix('admin')->group(function() {
             Route::controller(PengaduanController::class)->group(function() {
                 Route::get('/', 'show_data')->name('admin_pengaduan');
                 Route::get('{id}', 'show_by_id')->name('pengaduan_by_id');
+                Route::get('hapus/{id}', 'hapus')->name('hapus_by_id');
             });
         });
 

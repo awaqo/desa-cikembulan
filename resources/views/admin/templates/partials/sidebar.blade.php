@@ -4,11 +4,11 @@
         <span class="text-white text-3xl font-semibold hover:text-gray-300">Admin</span>
     </a>
     <nav class="text-white text-base font-semibold pt-3">
-        <a href="{{ route('dashboard') }}" class="{{ (request()->is('admin/dashboard')) ? 'active-nav-link' : '' }} flex items-center opacity-75 hover:opacity-100 text-white py-4 pl-6 nav-item">
+        <a href="{{ route('dashboard') }}" class="{{ (request()->is('admin/dashboard')) ? 'active-nav-link' : 'opacity-75' }} flex items-center hover:opacity-100 text-white py-4 pl-6 nav-item">
             <i class="fas fa-tachometer-alt mr-3"></i>
             Dashboard
         </a>
-        <a href="{{ route('admin_pengaduan') }}" class="{{ (request()->is('admin/pengaduan')) ? 'active-nav-link' : '' }} flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+        <a href="{{ route('admin_pengaduan') }}" class="{{ (request()->is('admin/pengaduan')) ? 'active-nav-link' : 'opacity-75' }} flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item">
             <i class="fas fa-sticky-note mr-3"></i>
             Pengaduan
         </a>

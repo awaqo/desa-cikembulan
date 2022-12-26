@@ -4,7 +4,7 @@
         <div class="mb-6 md:mb-0">
             <a href="/" class="flex items-center">
                 <img src="{{ asset('images/logo-bms.png') }}" class="mr-3 h-8" alt="" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Desa Cikembulan</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Desa Cikembulan</span>
             </a>
         </div>
     </div>

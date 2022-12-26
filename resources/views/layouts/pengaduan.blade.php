@@ -47,7 +47,7 @@
                     </div>
                     <div>
                         <label for="nik" class="block mb-2 text-sm font-medium text-gray-900 ">Nomor Induk Kependudukan (NIK)</label>
-                        <input type="text" name="nik" id="nik" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5" required>
+                        <input type="number" min="16" name="nik" id="nik" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5" required>
                     </div>
                     <div>
                         <label for="no_hp" class="block mb-2 text-sm font-medium text-gray-900 ">Nomor Handphone</label>
@@ -55,10 +55,10 @@
                     </div>  
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Alamat Email</label>
-                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5" required>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5">
                     </div>
                     
-                    <div>   
+                    <div>
                         <label for="jenis_kelamin" class="block mb-2 text-sm font-medium text-gray-900">Jenis Kelamin</label>
                         <select name="jenis_kelamin" id="jenis_kelamin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5">
                             <option selected>Pilih jenis kelamin</option>
