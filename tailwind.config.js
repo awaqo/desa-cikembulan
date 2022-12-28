@@ -6,6 +6,9 @@ module.exports = {
     "./resources/**/*.vue",
   ],
   theme: {
+    listStyleType: {
+      roman: 'upper-roman',
+    },
     extend: {},
   },
   plugins: [
