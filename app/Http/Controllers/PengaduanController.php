@@ -5,17 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use App\Models\Pengaduan;
-use App\Models\User;
 use App\Notifications\AduanDiterima;
 use Illuminate\Support\Facades\Notification;
-use Illuminate\Support\Facades\Auth;
-use PDF;
 
 class PengaduanController extends Controller
 {
     public function __construct(Request $request) {
         $no = 1;
         View::share('no', $no);
+    }
+
+    public function index() {
+        return view('layouts.pengaduan', [
+            "title" => 'Pengaduan'
+        ]);
     }
 
     public function proses_pengaduan(Request $request) {
@@ -57,27 +60,12 @@ class PengaduanController extends Controller
 
     public function show_data() {
         $pengaduanData = Pengaduan::paginate(10);
-        $adminData = User::where('id', '=', auth()->id())->get();
-        return view('admin.pengaduan.index', compact('pengaduanData', 'adminData'));
+        return view('admin.pengaduan.index', compact('pengaduanData'));
     }
 
     public function show_by_id($id) {
         $pengaduanData = Pengaduan::where('id',$id)->get();
-        $adminData = User::where('id', '=', auth()->id())->get();
-        return view('admin.pengaduan.show_by_id', compact('pengaduanData', 'adminData'));
-    }
-
-    // Preview PDF
-    public function previewPDF($id) {
-        $showData = Pengaduan::where('id', $id)->get();
-        return view('admin.pengaduan.laporan_pengaduan_pdf', compact('showData'));
-    }
-
-    // Export to PDF
-    public function exportPDF($id) {
-        $showData = Pengaduan::where('id', $id)->get();
-        $pdf = PDF::loadView('admin.pengaduan.laporan_pengaduan_pdf', ['showData' => $showData]);
-        return $pdf->download('laporan_pengaduan_'.$id.'.pdf');
+        return view('admin.pengaduan.show_by_id', compact('pengaduanData'));
     }
 
     public function hapus($id) {

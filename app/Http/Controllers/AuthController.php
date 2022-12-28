@@ -40,10 +40,7 @@ class AuthController extends Controller
             'password'  => Hash::make($data['password'])
         ]);
 
-        if (Auth::check()) {
-            return redirect('admin/akun')->with('success', 'Akun admin telah berhasil dibuat');
-        }
-        return redirect('admin/login')->with('success', 'Akun admin telah berhasil dibuat');
+        return redirect('admin/dashboard')->with('success', 'Akun admin telah berhasil dibuat');
     }
 
     public function validate_login(Request $request) {

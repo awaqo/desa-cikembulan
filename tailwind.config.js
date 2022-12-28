@@ -7,9 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {},
-    listStyleType: {
-      roman: 'upper-roman',
-    }
   },
   plugins: [
     require('@tailwindcss/line-clamp'),

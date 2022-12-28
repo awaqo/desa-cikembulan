@@ -12,14 +12,22 @@
             <i class="fas fa-sticky-note mr-3"></i>
             Pengaduan
         </a>
-        <a href="{{ route('indexBerita') }}" class="{{ (request()->is('admin/berita')) ? 'active-nav-link' : 'opacity-75' }} flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item">
-            <i class="fa-solid fa-newspaper mr-3"></i>
-            Berita
+        {{-- <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <i class="fas fa-table mr-3"></i>
+            Tables
         </a>
-        <a href="{{ route('admin_akun') }}" class="{{ (request()->is('admin/akun')) ? 'active-nav-link' : 'opacity-75' }} flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item">
-            <i class="fa-solid fa-user-shield mr-3"></i>
-            Admin
+        <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <i class="fas fa-align-left mr-3"></i>
+            Forms
         </a>
+        <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <i class="fas fa-tablet-alt mr-3"></i>
+            Tabbed Content
+        </a>
+        <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <i class="fas fa-calendar mr-3"></i>
+            Calendar
+        </a> --}}
     </nav>
 
     <a href="{{ route('logout') }}" class="absolute w-full upgrade-btn bottom-0 text-white font-bold flex items-center justify-center py-4">

@@ -12,45 +12,15 @@
                 <h1 class="w-full md:max-w-lg text-center sm:text-left font-bold text-3xl sm:text-4xl text-[#2EB5F8]">
                     Informasi Administrasi Kependudukan
                 </h1>
-                {{-- <ol class="w-full list-none list-inside md:max-w-xl mt-4 text-lg text-gray-500 font-medium">
-                    <li>A. Persyaratan Pembuatan Akte Kelahiran</li>
-                    <li>B. Persyaratan Warga Pindah Datang</li>
-                    <li>C. Persyaratan Surat Keterangan Domisili Perorangan</li>
-                    <li>D. Persyaratan Perubahan Kartu Keluarga</li>
-                    <li>E. Persyaratan Warga Pindah Keluar</li>
-                    <li>F. Persyaratan Pengantar Nikah</li>
-                    <li>G. Persyaratan Surat Keterangan Usaha</li>
-                </ol> --}}
-                <table class="text-gray-500 font-medium text-sm sm:text-lg">
-                    <tr>
-                        <td class="w-5">A.</td>
-                        <td>Persyaratan Pembuatan Akte Kelahiran</td>
-                    </tr>
-                    <tr>
-                        <td class="w-5">B.</td>
-                        <td>Persyaratan Warga Pindah Datang</td>
-                    </tr>
-                    <tr>
-                        <td class="w-5">C.</td>
-                        <td>Persyaratan Surat Keterangan Domisili Perorangan</td>
-                    </tr>
-                    <tr>
-                        <td class="w-5">D.</td>
-                        <td>Persyaratan Perubahan Kartu Keluarga</td>
-                    </tr>
-                    <tr>
-                        <td class="w-5">E.</td>
-                        <td>Persyaratan Warga Pindah Keluar</td>
-                    </tr>
-                    <tr>
-                        <td class="w-5">F.</td>
-                        <td>Persyaratan Pengantar Nikah</td>
-                    </tr>
-                    <tr>
-                        <td class="w-5">G.</td>
-                        <td>Persyaratan Surat Keterangan Usaha</td>
-                    </tr>
-                </table>
+                <ol class="w-full list-decimal list-inside md:max-w-xl mt-4 text-lg text-gray-500 font-medium">
+                    <li>Persyaratan Pembuatan Akte Kelahiran</li>
+                    <li>Persyaratan Warga Pindah Datang</li>
+                    <li>Persyaratan Surat Keterangan Domisili Perorangan</li>
+                    <li>Persyaratan Perubahan Kartu Keluarga</li>
+                    <li>Persyaratan Warga Pindah Keluar</li>
+                    <li>Persyaratan Pengantar Nikah</li>
+                    <li>Persyaratan Surat Keterangan Usaha</li>
+                </ol>
             </div>
         </div>
 

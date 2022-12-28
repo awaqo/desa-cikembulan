@@ -2,15 +2,10 @@
 
 @section('content-admin')
     <div class="p-5">
-        @foreach ($pengaduanData as $data)
-        <div class="my-5 flex space-x-2">
-            <a href="{{ route('admin_pengaduan') }}" class="py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl">
-                <i class="fa-solid fa-arrow-left mr-2"></i> Kembali
-            </a>
-            <a href="{{ url('admin/pengaduan/unduh/'.$data->id) }}" class="py-2 px-3 rounded-xl text-white bg-emerald-500 hover:bg-emerald-600" data-tooltip-target="tooltip-unduh" data-tooltip-style="light">
-                Unduh PDF <i class="fa-solid fa-file-pdf ml-2"></i>
-            </a>
+        <div class="my-5">
+            <a href="{{ route('admin_pengaduan') }}" class="py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl"><i class="fa-solid fa-arrow-left mr-2"></i> Kembali</a>
         </div>
+        @foreach ($pengaduanData as $data)
             <h1 class="text-xl text-center mt-3 font-bold">Detail Data Diri Pelapor</h1>
             <div class="flex flex-col items-center">
                 <div class="h-1 w-24 my-6 bg-[#2EB5F8]"></div>
