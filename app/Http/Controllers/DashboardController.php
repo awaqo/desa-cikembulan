@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Pengaduan;
 use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
@@ -16,6 +18,9 @@ class DashboardController extends Controller
     }
 
     public function dashboard() {
-        return view('admin.dashboard.index');
+        $adminData = User::where('id', '=', auth()->id())->get();
+        $admin = User::count();
+        $pengaduan = Pengaduan::count();
+        return view('admin.dashboard.index', compact('adminData', 'admin', 'pengaduan'));
     }
 }

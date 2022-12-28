@@ -35,4 +35,10 @@ class MainController extends Controller
             "title" => 'Profil - Gambaran Umum',
         ]);
     }
+
+    public function form_pengaduan() {
+        return view('layouts.pengaduan', [
+            "title" => 'Pengaduan',
+        ]);
+    }
 }
