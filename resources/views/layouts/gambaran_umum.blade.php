@@ -49,6 +49,10 @@
         <h1 class="mt-2 uppercase text-2xl text-center font-bold text-gray-800" data-aos="fade-up" data-aos-easing="ease-in-out">
             Kec. Pekuncen - Kab. Banyumas
         </h1>
+
+        <div class="mt-10" data-aos="fade-up" data-aos-easing="ease-in-out">
+            <img class="w-full max-w-4xl mx-auto" src="{{ asset('images/struktur.png') }}" alt="">
+        </div>
     </div>
     
 @endsection

@@ -2,6 +2,30 @@
 
 @section('content-admin')
 <div class="p-5">
+    {{-- modal --}}
+    <div id="deleteModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+        <div class="relative w-full h-full max-w-md md:h-auto">
+            <div class="relative bg-white rounded-lg shadow">
+                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="deleteModal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="p-6 text-center">
+                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <form action="{{ url('admin/akun/hapus-akun') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="deleted_id" id="delete_id">
+                        <h3 class="mb-5 text-lg font-normal text-gray-500">Apakah Anda yakin ingin menghapus akun ini?</h3>
+                        <button data-modal-toggle="deleteModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Batal</button>
+                        <button type="submit" data-modal-toggle="deleteModal" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center ml-2">
+                            Yakin
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <h1 class="text-2xl font-medium text-black pb-6">Data Admin</h1>
 
     {{-- alert data --}}
@@ -55,9 +79,9 @@
     </div>
 
     {{-- pagination --}}
-    <div class="mb-8 flex justify-center">
-        {!! $data->links() !!}
-    </div>
+    {{-- <div class="mb-8 flex justify-center">
+        {!! $dataAdmin->links() !!}
+    </div> --}}
     <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left text-gray-500">
             <thead class="text-xs text-white uppercase bg-gray-500">
@@ -80,32 +104,38 @@
                 </tr>
             </thead>
             <tbody class="bg-white divide-y">
-                @foreach ($allUser as $d)
-                    <tr class="divide-x">
-                        <td class="w-16 py-4 px-6 text-center font-normal text-gray-900 whitespace-nowrap">
-                            {{ $d->id }}
-                        </td>
-                        <td class="py-4 px-6">
-                            {{ $d->name }}
-                        </td>
-                        <td class="py-4 px-6">
-                            {{ $d->username }}
-                        </td>
-                        <td class="py-4 px-6">
-                            {{ $d->created_at }}
-                        </td>
-                        <td class="w-32 text-center py-4 px-6">
-                            <div class="flex items-center space-x-2">
-                                <a href="{{ url('admin/akun/edit/'. $d->id) }}" class="py-2 px-3 rounded-md text-white bg-yellow-500 hover:bg-yellow-600" data-tooltip-target="tooltip-open" data-tooltip-style="light">
-                                    <i class="fa-solid fa-edit"></i>
-                                </a>
-                                <button type="button" data-modal-toggle="popup-modal" class="py-2 px-3 rounded-md text-white bg-red-500 hover:bg-red-600" data-tooltip-target="tooltip-delete" data-tooltip-style="light">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </td>
+                @if ($dataAdmin->count() < 1)
+                    <tr>
+                        <td colspan="5" class="py-4 px-6 text-center text-lg">Belum ada postingan berita</td>
                     </tr>
-                @endforeach    
+                @else  
+                    @foreach ($dataAdmin as $d)
+                        <tr class="divide-x">
+                            <td class="w-16 py-4 px-6 text-center font-normal text-gray-900 whitespace-nowrap">
+                                {{ $d->id }}
+                            </td>
+                            <td class="py-4 px-6">
+                                {{ $d->name }}
+                            </td>
+                            <td class="py-4 px-6">
+                                {{ $d->username }}
+                            </td>
+                            <td class="py-4 px-6">
+                                {{ $d->created_at }}
+                            </td>
+                            <td class="w-32 text-center py-4 px-6">
+                                <div class="flex items-center space-x-2">
+                                    <a href="{{ url('admin/akun/edit/'. $d->id) }}" class="py-2 px-3 rounded-md text-white bg-yellow-500 hover:bg-yellow-600" data-tooltip-target="tooltip-open" data-tooltip-style="light">
+                                        <i class="fa-solid fa-edit"></i>
+                                    </a>
+                                    <button data-modal-toggle="deleteModal" type="button" value="{{ $d->id }}" class="deleteBtn py-2 px-3 rounded-md text-white bg-red-500 hover:bg-red-600" data-tooltip-target="tooltip-delete" data-tooltip-style="light">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach    
+                @endif
             </tbody>
         </table>
     </div>
@@ -120,29 +150,24 @@
         <div class="tooltip-arrow" data-popper-arrow></div>
     </div>
 
-    {{-- modal --}}
-    <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
-        <div class="relative w-full h-full max-w-md md:h-auto">
-            <div class="relative bg-white rounded-lg shadow">
-                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="popup-modal">
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    <span class="sr-only">Close modal</span>
-                </button>
-                <div class="p-6 text-center">
-                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <h3 class="mb-5 text-lg font-normal text-gray-500">Apakah Anda yakin ingin menghapus akun ini?</h3>
-                    <button data-modal-toggle="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Batal</button>
-                    <a href="{{ url('admin/akun/hapus-akun/'. $d->id) }}" data-modal-toggle="popup-modal" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center ml-2">
-                        Yakin
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     {{-- pagination --}}
-    <div class="mt-8 flex justify-center">
-        {!! $data->links() !!}
-    </div>
+    {{-- <div class="mt-8 flex justify-center">
+        {!! $dataAdmin->links() !!}
+    </div> --}}
 </div>
+@endsection
+
+@section('script')
+    <script>
+        $(document).ready(function() {
+            $(document).on('click', '.deleteBtn', function (e) {
+                e.preventDefault();
+
+                var d_id = $(this).val();
+                $('#delete_id').val(d_id);
+
+                $('#deleteModal').modal('show');
+            });
+        })
+    </script>
 @endsection

@@ -16,8 +16,10 @@ return new class extends Migration
         Schema::create('berita', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
+            $table->string('slug');
             $table->text('konten');
             $table->string('gambar');
+            $table->string('author');
             $table->timestamps();
         });
     }

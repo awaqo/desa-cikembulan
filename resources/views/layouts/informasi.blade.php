@@ -73,7 +73,103 @@
         <h1 class="capitalize text-2xl sm:text-3xl text-center font-bold text-[#2EB5F8]" data-aos="fade-up" data-aos-easing="ease-in-out">
             Pelayanan Administrasi Kependudukan
         </h1>
-        <div class=""></div>
+        <div class="mt-10 sm:mt-16 w-full max-w-6xl mx-auto" data-aos="fade-up" data-aos-easing="ease-in-out">
+            <ol class="list-roman list-inside flex flex-row flex-wrap justify-center items-center sm:space-x-8">
+                <div class="space-y-5 mb-5">
+                    <li class="text-lg font-bold">
+                        Persyaratan Pembuatan Akte Kelahiran
+                        <ul class="pl-5 text-base font-normal mt-1 space-y-1 list-disc list-inside">
+                            <li>Surat Pengantar Ketua RT Setempat</li>
+                            <li>KK Asli</li>
+                            <li>Surat Bidan Asli atau SPTJM</li>
+                            <li>Buku Nikah Asli</li>
+                            <li>Materai 10.000 (2 lembar)</li>
+                            <li>Fotocopy KTP Orang Tua Kandung</li>
+                            <li>Fotocopy KTP Saksi (2 orang)</li>
+                            <li>Fotocopy Rapor/Ijazah Terakhir</li>
+                         </ul>
+                    </li>
+    
+                    <li class="text-lg font-bold">
+                        Persyaratan Warga Pindah Datang
+                        <ul class="pl-5 text-base font-normal mt-1 space-y-1 list-disc list-inside">
+                            <li>Surat Pindah dari Daerah Asal</li>
+                            <li>KK (Asli & Fotocopy)</li>
+                            <li>Fotocopy KTP</li>
+                            <li>Surat Pengantar Ketua RT Setempat</li>
+                            <li>Buku Nikah Asli</li>
+                            <li>Materai 10.000 (2 lembar)</li>
+                            <li>Fotocopy Ijazah Terakhir</li>
+                         </ul>
+                    </li>
+
+                    <li class="text-lg font-bold">
+                        Persyaratan Surat Keterangan Domisili Perorangan
+                        <ul class="pl-5 text-base font-normal mt-1 space-y-1 list-disc list-inside">
+                            <li>Surat Pengantar Ketua RT Setempat</li>
+                            <li>Fotocopy KK</li>
+                            <li>Fotocopy KTP</li>
+                         </ul>
+                    </li>
+                    
+                    <li class="text-lg font-bold">
+                        Persyaratan Perubahan Kartu Keluarga
+                        <ul class="pl-5 text-base font-normal mt-1 space-y-1 list-disc list-inside">
+                            <li>Surat Pengantar Ketua RT Setempat</li>
+                            <li>Surat Pelaporan Kematian <br>(jika ada anggota keluarga yang meninggal)</li>
+                            <li>KK Asli</li>
+                            <li>Buku Nikah Asli</li>
+                            <li>Fotocopy Rapor/Ijazah Anak</li>
+                            <li>Materai 10.000 (1 lembar)</li>
+                         </ul>
+                    </li>
+                </div>
+
+                <div class="space-y-5 lg:-mt-20">
+                    <li class="text-lg font-bold">
+                        Persyaratan Warga Pindah Keluar
+                        <ul class="pl-5 text-base font-normal mt-1 space-y-1 list-disc list-inside">
+                            <li>Surat Pengantar Ketua RT Setempat</li>
+                            <li>KK (Asli & Fotocopy)</li>
+                            <li>Fotocopy KTP</li>
+                            <li>Buku Nikah Asli Orang Tua</li>
+                            <li>Materai 10.000 (1 lembar)</li>
+                            <li>Alamat Yang Dituju <br>(Nama Jalan/RT/RW/Dusun/Desa/Kec/Kab/Prov)</li>
+                         </ul>
+                    </li>
+
+                    <li class="text-lg font-bold">
+                        Persyaratan Pengantar Nikah
+                        <ul class="pl-5 text-base font-normal mt-1 space-y-1 list-disc list-inside">
+                            <li>Surat Pengantar Ketua RT Setempat</li>
+                            <li>Fotocopy KK</li>
+                            <li>Fotocopy KTP</li>
+                            <li>Fotocopy Ijazah SLTA</li>
+                            <li>Fotocopy Akte Kelahiran</li>
+                            <li>Fotocopy KTP Orang Tua</li>
+                            <li>Fotocopy KTP Calon Suami/Istri</li>
+                            <li>Fotocopy KK Calon Suami/Istri</li>
+                            <li>Fotocopy KTP Saksi (2 orang)</li>
+                            <li>Fotocopy KTP Saksi Jenis Kelamin <br>(jika sudah tidak ada orang tua)</li>
+                            <li>Materai 10.000 ( laki-laki 2 lembar, perempuan 5 lembar)</li>
+                            <li>Fotocopy Akte Perceraian (Duda/Janda)</li>
+                            <li>Pas Photo 2x3 2 lembar (latar biru)</li>
+                         </ul>
+                    </li>
+    
+                    <li class="text-lg font-bold">
+                        Persyaratan Surat Keterangan Usaha
+                        <ul class="pl-5 text-base font-normal mt-1 space-y-1 list-disc list-inside">
+                            <li>Surat Pengantar Ketua RT Setempat</li>
+                            <li>Fotocopy KK</li>
+                            <li>Fotocopy KTP</li>
+                            <li>Foto Tempat Usaha</li>
+                         </ul>
+                    </li>
+                </div>
+
+            </ol>
+        </div>
     </div>
     
 @endsection

@@ -41,5 +41,7 @@
 
     @include('templates.partials.scripts')
 
+    @yield('script')
+
 </body>
 </html>

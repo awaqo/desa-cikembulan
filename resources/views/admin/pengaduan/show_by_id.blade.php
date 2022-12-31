@@ -11,6 +11,8 @@
                 Unduh PDF <i class="fa-solid fa-file-pdf ml-2"></i>
             </a>
         </div>
+
+        <div class="max-w-full mt-3 p-8 rounded-lg bg-white shadow-lg">
             <h1 class="text-xl text-center mt-3 font-bold">Detail Data Diri Pelapor</h1>
             <div class="flex flex-col items-center">
                 <div class="h-1 w-24 my-6 bg-[#2EB5F8]"></div>
@@ -86,12 +88,13 @@
                     <div class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5">{{ $data->deskripsi }}</div>
                 </div>
                 <div class="mb-6">
-                    <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">Upload file pendukung</label>
+                    <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">File pendukung</label>
                     <div class="max-w-xl">
                         <img src="{{ asset('storage/pengaduan/'. $data->file_pendukung) }}" class="rounded-xl" alt="">
                     </div>
                 </div>
             </form>        
+        </div>
         @endforeach
     </div>
 @endsection

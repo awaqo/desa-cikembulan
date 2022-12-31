@@ -31,7 +31,7 @@
         </div>
         <div>
             <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
-            <input type="password" name="password" id="password" 
+            <input type="text" name="password" id="password" 
                 class="bg-gray-600 border-gray-500 placeholder-gray-400 text-white text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5"
                 placeholder="••••••••" required>
             @if ($errors->has('password'))

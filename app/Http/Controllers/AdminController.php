@@ -10,10 +10,9 @@ use Illuminate\Support\Facades\Hash;
 class AdminController extends Controller
 {
     public function index() {
-        $data = User::paginate(10);
-        $allUser = User::all();
+        $dataAdmin = User::orderBy('created_at', 'asc')->get();
         $adminData = User::where('id', '=', auth()->id())->get();
-        return view('admin.akun.akun_admin', compact('data', 'adminData', 'allUser'));
+        return view('admin.akun.akun_admin', compact('dataAdmin', 'adminData'));
     }
 
     public function add_admin() {
@@ -24,8 +23,6 @@ class AdminController extends Controller
     public function admin_by_id($id) {
         $adminData = User::where('id', '=', auth()->id())->get();
         $admin = User::where('id', $id)->get();
-        // $pswAdmin = $admin['password'];
-		// $decrypted = Crypt::decryptString($pswAdmin);
 
         return view('admin.akun.admin_by_id', compact('admin', 'adminData'));
     }
@@ -43,8 +40,8 @@ class AdminController extends Controller
         return redirect('admin/akun')->with('success', 'Data admin berhasil di update');
     }
 
-    public function hapus_akun($id) {
-        $akun = User::find($id);
+    public function hapus_akun(Request $request) {
+        $akun = User::find($request->deleted_id);
         $akun->delete();
 
         return redirect('admin/akun')->with('success', 'Akun berhasil dihapus');

@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Berita;
 
 class MainController extends Controller
 {
     public function index() {
-        return view('layouts.home', [
-            "title" => 'Beranda'
-        ]);
+        $title = 'Beranda';
+        $dataBerita = Berita::latest('created_at')->take(3)->get();
+        return view('layouts.home', compact('title', 'dataBerita'));
     }
 
     public function informasi() {
@@ -19,7 +20,7 @@ class MainController extends Controller
     }
 
     public function layanan() {
-        return view('layouts.layanan', [
+        return view('layouts.layanan.layanan', [
             "title" => 'Layanan'
         ]);
     }
@@ -37,7 +38,7 @@ class MainController extends Controller
     }
 
     public function form_pengaduan() {
-        return view('layouts.pengaduan', [
+        return view('layouts..layanan.pengaduan', [
             "title" => 'Pengaduan',
         ]);
     }

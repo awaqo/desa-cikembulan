@@ -76,12 +76,29 @@ class PengaduanController extends Controller
     // Export to PDF
     public function exportPDF($id) {
         $showData = Pengaduan::where('id', $id)->get();
-        $pdf = PDF::loadView('admin.pengaduan.laporan_pengaduan_pdf', ['showData' => $showData]);
+        $data = [
+            'title' => 'Laporan Pengaduan Warga',
+            'date' => date('d/m/Y'),
+            'showData' => $showData,
+        ];
+        $pdf = PDF::loadView('admin.pengaduan.laporan_pengaduan_pdf', $data);
         return $pdf->download('laporan_pengaduan_'.$id.'.pdf');
     }
 
-    public function hapus($id) {
-        $data = Pengaduan::find($id);
+    public function unduh_semua() {
+        $datas = Pengaduan::all();
+        $data = [
+            'title' => 'Data Laporan Pengaduan Warga',
+            'date' => date('d/m/Y'),
+            'datas' => $datas,
+        ];
+        
+        $pdf = PDF::loadView('admin.pengaduan.semua_data_pengaduan', $data);
+        return $pdf->download('semua_data_pengaduan.pdf');
+    }
+
+    public function hapus_pengaduan(Request $request) {
+        $data = Pengaduan::find($request->deleted_id);
         $data->delete();
 
         return redirect()->route('admin_pengaduan')->with('success', 'Data berhasil dihapus');

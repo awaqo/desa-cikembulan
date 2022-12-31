@@ -50,15 +50,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/" class="block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#2EB5F8] md:p-0">
+                    <a href="{{ route('berita_desa') }}" class="{{ ($title === "Berita Desa") ? 'md:bg-transparent md:text-[#2EB5F8] bg-[#2EB5F8] text-white' : '' }} block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#2EB5F8] md:p-0">
                         Berita Desa
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="/" class="block py-2 pl-3 pr-4 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#2EB5F8] md:p-0">
                         <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </div>
     </div>

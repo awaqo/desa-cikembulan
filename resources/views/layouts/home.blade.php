@@ -58,74 +58,26 @@
         <h1 class="font-bold text-3xl text-center" data-aos="fade-up" data-aos-easing="ease-in-out">Kabar Desa</h1>
 
         <!-- Recent Post -->
-        <div class="relative" data-aos="fade-up" data-aos-easing="ease-in-out">
-            <div class="recent-post mt-14 flex justify-center sm:mx-6">
-                <div class="w-full sm:w-80 bg-white mb-1 rounded-3xl shadow-md mx-0 sm:mx-4">
-                    <a href="/">
-                        <img class="rounded-t-lg" src="{{ asset('images/r_post_img_1.jpg') }}" alt="" />
+        <div class="mt-8 w-full sm:flex sm:justify-between space-y-5 sm:space-y-0" data-aos="fade-up" data-aos-easing="ease-in-out">
+            @foreach ($dataBerita as $d)
+                <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-md">
+                    <a href="{{ url('berita-desa/'.$d->slug) }}">
+                        <img class="rounded-t-lg" src="{{ asset('storage/berita/'.$d->gambar) }}" alt="" />
                     </a>
                     <div class="p-5">
-                        <a href="/">
-                            <h5 class="mb-4 text-xl font-bold tracking-tight text-gray-900 line-clamp-2">BALAIDESA CIKEMBULAN: MEMBERIKAN PENGALAMAN BAGI PESERTA PKL MAHASISWA ITTP</h5>
+                        <a href="{{ url('berita-desa/'.$d->slug) }}">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ $d->judul }}</h5>
                         </a>
-                        <p class="mb-6 font-normal text-gray-600 text-left sm:text-justify line-clamp-3">KARANGKEDAWUNG- Hari Senin ( 7/11/2022) di Balai Desa Cikembulan, Kecamatan Patikraja, Banyumas, Jawa Tengah merupakan salah satu tempat dimana Praktek Kerja Lapangan (PKL) ITTP yang dilaksanakan mulai Tanggal 7 November s.d 30 Desember 2022.</p>
-                        <p class="text-sm text-gray-400">7 Agustus 2022 15:30:15</p>
+                        <div class="mb-3 font-normal text-gray-700 line-clamp-3">{!! $d->konten !!}</div>
+                        <div class="mb-1 font-normal text-gray-400">
+                            <i class="fa-solid fa-calendar mr-2"></i> {{ $d->created_at }}
+                        </div>
+                        <div class="mb-3 font-normal text-gray-400">
+                            <i class="fa-solid fa-user mr-2"></i> {{ $d->author }}
+                        </div>
                     </div>
                 </div>
-    
-                <div class="w-full sm:w-80 bg-white mb-1 rounded-3xl shadow-md mx-0 sm:mx-4">
-                    <a href="/">
-                        <img class="rounded-t-lg" src="{{ asset('images/r_post_img_2.jpg') }}" alt="" />
-                    </a>
-                    <div class="p-5">
-                        <a href="/">
-                            <h5 class="mb-4 text-xl font-bold tracking-tight text-gray-900 line-clamp-2">Laporan Keuangan APBDesa Pedekik Tahun Anggaran 2022</h5>
-                        </a>
-                        <p class="mb-6 font-normal text-gray-600 text-left sm:text-justify line-clamp-3">KARANGKEDAWUNG- Hari Senin ( 7/11/2022) di Balai Desa Cikembulan, Kecamatan Patikraja, Banyumas, Jawa Tengah merupakan salah satu tempat dimana Praktek Kerja Lapangan (PKL) ITTP yang dilaksanakan mulai Tanggal 7 November s.d 30 Desember 2022.</p>
-                        <p class="text-sm text-gray-400">7 Agustus 2022 15:30:15</p>
-                    </div>
-                </div>
-    
-                <div class="w-full sm:w-80 bg-white mb-1 rounded-3xl shadow-md mx-0 sm:mx-4">
-                    <a href="/">
-                        <img class="rounded-t-lg" src="{{ asset('images/r_post_img_1.jpg') }}" alt="" />
-                    </a>
-                    <div class="p-5">
-                        <a href="/">
-                            <h5 class="mb-4 text-xl font-bold tracking-tight text-gray-900 line-clamp-2">BALAIDESA CIKEMBULAN: MEMBERIKAN PENGALAMAN BAGI PESERTA PKL MAHASISWA ITTP</h5>
-                        </a>
-                        <p class="mb-6 font-normal text-gray-600 text-left sm:text-justify line-clamp-3">KARANGKEDAWUNG- Hari Senin ( 7/11/2022) di Balai Desa Cikembulan, Kecamatan Patikraja, Banyumas, Jawa Tengah merupakan salah satu tempat dimana Praktek Kerja Lapangan (PKL) ITTP yang dilaksanakan mulai Tanggal 7 November s.d 30 Desember 2022.</p>
-                        <p class="text-sm text-gray-400">7 Agustus 2022 15:30:15</p>
-                    </div>
-                </div>
-    
-                <div class="w-full sm:w-80 bg-white mb-1 rounded-3xl shadow-md mx-0 sm:mx-4">
-                    <a href="/">
-                        <img class="rounded-t-lg" src="{{ asset('images/r_post_img_1.jpg') }}" alt="" />
-                    </a>
-                    <div class="p-5">
-                        <a href="/">
-                            <h5 class="mb-4 text-xl font-bold tracking-tight text-gray-900 line-clamp-2">BALAIDESA CIKEMBULAN: MEMBERIKAN PENGALAMAN BAGI PESERTA PKL MAHASISWA ITTP</h5>
-                        </a>
-                        <p class="mb-6 font-normal text-gray-600 text-left sm:text-justify line-clamp-3">KARANGKEDAWUNG- Hari Senin ( 7/11/2022) di Balai Desa Cikembulan, Kecamatan Patikraja, Banyumas, Jawa Tengah merupakan salah satu tempat dimana Praktek Kerja Lapangan (PKL) ITTP yang dilaksanakan mulai Tanggal 7 November s.d 30 Desember 2022.</p>
-                        <p class="text-sm text-gray-400">7 Agustus 2022 15:30:15</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hidden sm:block w-full justify-between">
-                <button type="button" class="prev-btn absolute top-0 -left-7 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-400/30 group-hover:bg-gray-400/60 group-focus:ring-2 group-focus:ring-gray-400/50 group-focus:outline-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-gray-700 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                        <span class="sr-only">Previous</span>
-                    </span>
-                </button>
-                <button type="button" class="next-btn absolute top-0 -right-7 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-400/30 group-hover:bg-gray-400/60 group-focus:ring-2 group-focus:ring-gray-400/50 group-focus:outline-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-gray-700 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        <span class="sr-only">Next</span>
-                    </span>
-                </button>
-            </div>
+            @endforeach
         </div>
     </div>
 

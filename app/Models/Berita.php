@@ -10,8 +10,10 @@ class Berita extends Model
     use HasFactory;
     protected $fillable = [
         'judul',
+        'slug',
         'konten',
         'gambar',
+        'author',
     ];
     protected $table = 'berita';
 }

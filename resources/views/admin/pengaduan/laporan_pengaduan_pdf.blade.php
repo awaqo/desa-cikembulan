@@ -25,8 +25,8 @@
             <h1 class="text-center">Laporan Pengaduan Warga</h1>
             <div style="width: 60%; margin-left: auto; margin-right: auto; border-bottom: 3px solid #393c3e; margin-bottom: 3px;"></div>
             <div style="width: 60%; margin-left: auto; margin-right: auto; border-bottom: 3px solid #393c3e; margin-bottom: 3px;"></div>
-
-            <div style="margin-top: 40px;">
+            <p style="text-align: center">Diexport pada : {{ $date }}</p>
+            <div>
                 {{-- data diri --}}
                 <div>
                     <h3 style="width: 20%; text-align: center;)">Data diri</h3>

@@ -37,7 +37,7 @@
                     <label for="name" class="block mb-2 text-sm font-medium text-white">Nama</label>
                     <input type="text" name="name" id="name" 
                         class="bg-gray-600 border-gray-500 placeholder-gray-400 text-white text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5" 
-                        placeholder="nama admin" required>
+                        placeholder="Contoh : Nama Admin" required>
                     @if ($errors->has('name'))
                         <span class="text-xs text-red-500">{{ $errors->first('name') }}</span>
                     @endif
@@ -46,14 +46,14 @@
                     <label for="username" class="block mb-2 text-sm font-medium text-white">Username</label>
                     <input type="text" name="username" id="username" 
                         class="bg-gray-600 border-gray-500 placeholder-gray-400 text-white text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5" 
-                        placeholder="username123" required>
+                        placeholder="Contoh : admin123" required>
                     @if ($errors->has('username'))
                         <span class="text-xs text-red-500">{{ $errors->first('username') }}</span>
                     @endif
                 </div>
                 <div>
                     <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
-                    <input type="password" name="password" id="password" 
+                    <input type="text" name="password" id="password" 
                         class="bg-gray-600 border-gray-500 placeholder-gray-400 text-white text-sm rounded-lg focus:ring-[#2EB5F8] focus:border-[#2EB5F8] block w-full p-2.5"
                         placeholder="••••••••" required>
                     @if ($errors->has('password'))

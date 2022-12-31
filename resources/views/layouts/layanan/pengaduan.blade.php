@@ -7,32 +7,13 @@
     <title>{{ $title }} | Desa Cikembulan</title>
     <link rel="shortcut icon" href="{{ asset('images/logo-bms.png') }}" type="image/x-icon">
 
-    <!-- Styles -->
-    @vite('resources/css/app.css')
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
-
-    <!-- Flowbite -->
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
-    <!-- Slick -->
-    <link rel="stylesheet" href="{{ asset('slick/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('slick/slick-theme.css') }}">
-
-    {{-- AOS --}}
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    @include('templates.partials.styles')
 </head>
 <body class="bg-[#f6f8fd]">
     <div class="flex justify-center items-center">
         {{-- form container --}}
         <div class="w-full sm:max-w-5xl my-0 sm:my-10 bg-white rounded-xl shadow-lg p-5 sm:p-8 flex flex-col items-center">
-            <a href="{{ route('beranda') }}" class="mr-auto text-sm my-4 hover:underline text-blue-500"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+            <a href="{{ route('layanan') }}" class="mr-auto my-4 py-2 px-5 rounded-xl bg-blue-500 hover:bg-blue-600 text-white"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
             
             <h1 class="text-2xl sm:text-3xl text-center mt-3 font-bold uppercase">Form Pengaduan</h1>
             <div class="h-1 w-24 mt-6 bg-[#2EB5F8]"></div>
@@ -114,7 +95,7 @@
                 </div>
                 <div class="mb-6">
                     <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">Upload file pendukung</label>
-                    <input name="file_pendukung" id="file_input" type="file" class="block w-full text-sm border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none">
+                    <input name="file_pendukung" id="file_input" type="file" class="block w-full text-sm border border-gray-300 rounded-lg cursor-pointer bg-gray-50 text-gray-400 focus:outline-none">
                 </div>
                 
                 <button type="submit" class="my-6 text-white bg-[#2EB5F8] hover:bg-[#009AE7] transition duration-300 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center">Kirim</button>
