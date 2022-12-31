@@ -99,6 +99,9 @@ class PengaduanController extends Controller
 
     public function hapus_pengaduan(Request $request) {
         $data = Pengaduan::find($request->deleted_id);
+
+        $deleteImg = Pengaduan::where('id', $request->deleted_id)->get()->first();
+        unlink(storage_path('app\public\pengaduan\\'.$deleteImg->file_pendukung ));
         $data->delete();
 
         return redirect()->route('admin_pengaduan')->with('success', 'Data berhasil dihapus');

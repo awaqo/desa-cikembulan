@@ -57,9 +57,6 @@
                 <div class="w-full md:max-w-lg text-justify mt-4 text-lg text-gray-500" data-aos="fade-up" data-aos-easing="ease-in-out">
                     Perencanaan pembangunan Desa Cikembulan dibahas bersama dalam musyarah perencanaan pembangunan Desa. Semua warga berhak untuk mengusulkan ide untuk terwujudnya Desa Cikembulan yang mandiri.
                 </div>
-                <a href="/" class="w-full text-center md:max-w-fit px-8 py-5 mt-8 font-bold uppercase text-white bg-[#2EB5F8] hover:bg-[#009AE7] transition duration-300 ease-in-out rounded-full" data-aos="fade-up" data-aos-easing="ease-in-out">
-                    Pembangunan <i class="fa-sharp fa-solid fa-caret-right"></i>
-                </a>
             </div>
             <div class="w-full sm:max-w-xl mx-auto md:mx-0 mt-6 md:mt-0">
                 <img class="mx-auto" src="{{ asset('images/informasi_illust_2.png') }}" alt="" data-aos="fade-up" data-aos-easing="ease-in-out">

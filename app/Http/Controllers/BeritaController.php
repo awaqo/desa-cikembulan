@@ -100,6 +100,9 @@ class BeritaController extends Controller
 
     public function hapus_berita(Request $request) {
         $berita = Berita::find($request->deleted_id);
+
+        $data = Berita::where('id', $request->deleted_id)->get()->first();
+        unlink(storage_path('app\public\berita\\'.$data->gambar ));
         $berita->delete();
 
         return redirect()->route('indexBerita')->with('success', 'Berhasil menghapus berita');
@@ -109,7 +112,7 @@ class BeritaController extends Controller
 
     public function indexUser() {
         $title = 'Berita Desa';
-        $dataBerita = Berita::paginate(5);
+        $dataBerita = Berita::latest()->paginate(5);
         return view('layouts.berita.berita_desa', compact('title', 'dataBerita'));
     }
 
